@@ -5,115 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Heidi Ann Smith - Personal Website">
     <title>Heidi Ann Smith</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pink': {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        },
+                        'forest': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Heidi Ann Smith</h1>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="logo">
+                    <h1 class="text-2xl font-bold text-forest-800">Heidi Ann Smith</h1>
+                </div>
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-forest-700 hover:text-pink-600 transition-colors font-medium">Home</a></li>
+                    <li><a href="#about" class="text-forest-700 hover:text-pink-600 transition-colors font-medium">About</a></li>
+                    <li><a href="research/" class="text-forest-700 hover:text-pink-600 transition-colors font-medium">Research</a></li>
+                    <li><a href="blog/" class="text-forest-700 hover:text-pink-600 transition-colors font-medium">Blog</a></li>
+                    <li><a href="dev/" class="text-forest-700 hover:text-pink-600 transition-colors font-medium">Dev</a></li>
+                    <li><a href="#contact" class="text-forest-700 hover:text-pink-600 transition-colors font-medium">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="research/">Research</a></li>
-                <li><a href="blog/">Blog</a></li>
-                <li><a href="dev/">Dev</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Hello, I'm Heidi</h1>
-                <p>Software engineer at Grammarly and Duke University graduate</p>
-                <a href="#about" class="cta-button">Learn More</a>
+    <main class="pt-20">
+        <section id="home" class="min-h-screen bg-gradient-to-br from-pink-100 via-white to-forest-100 flex items-center justify-center">
+            <div class="text-center px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl md:text-6xl font-bold text-forest-800 mb-6">Hello, I'm Heidi</h1>
+                <p class="text-xl md:text-2xl text-forest-600 mb-8 max-w-2xl mx-auto">Software engineer at Grammarly and Duke University graduate</p>
+                <a href="#about" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Learn More</a>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="profile-section">
-                        <img src="images/profile-photo.jpg" alt="Heidi Ann Smith" class="profile-photo">
-                        <div class="profile-text">
-                            <p>I work as a software engineer at Grammarly in New York. I graduated from Duke University in 2024, where I studied Computer Science and English.</p>
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-forest-800 mb-16">About Me</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-start gap-8">
+                        <img src="images/profile-photo.jpg" alt="Heidi Ann Smith" class="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-pink-200 mx-auto md:mx-0 flex-shrink-0">
+                        <div class="flex-1 text-center md:text-left">
+                            <p class="text-lg text-forest-700 mb-6 leading-relaxed">I work as a software engineer at Grammarly in New York. I graduated from Duke University in 2024, where I studied Computer Science and English.</p>
 
-                            <p>During college, I served as a teaching assistant and participated in programs focused on increasing diversity in tech. I also wrote for The Duke Chronicle and The Trek, and was involved with the Rotaract Club.</p>
+                            <p class="text-lg text-forest-700 mb-6 leading-relaxed">During college, I served as a teaching assistant and participated in programs focused on increasing diversity in tech. I also wrote for The Duke Chronicle and The Trek, and was involved with the Rotaract Club.</p>
 
-                            <p>I'm interested in the intersection of technology and communication, and enjoy working on projects that help people express themselves more clearly.</p>
+                            <p class="text-lg text-forest-700 leading-relaxed">I'm interested in the intersection of technology and communication, and enjoy working on projects that help people express themselves more clearly.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="research">
-            <div class="container">
-                <h2>Research</h2>
-                <div class="research-content">
-                    <p>Research projects and academic work from my time at Duke and beyond.</p>
+        <section id="research" class="py-20 bg-forest-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-forest-800 mb-16">Research</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg text-center text-forest-600 mb-12">Research projects and academic work from my time at Duke and beyond.</p>
 
-                    <div class="research-item">
-                        <h3>Judging Books by Their Covers: Reese's Book Club and Contemporary Bookishness</h3>
-                        <p class="research-meta">Senior Honors Thesis, Duke University • March 2024</p>
-                        <p class="research-description">
+                    <div class="bg-white rounded-lg shadow-lg p-8 border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-bold text-forest-800 mb-3">Judging Books by Their Covers: Reese's Book Club and Contemporary Bookishness</h3>
+                        <p class="text-forest-600 text-sm mb-6 italic">Senior Honors Thesis, Duke University • March 2024</p>
+                        <p class="text-forest-700 mb-6 leading-relaxed">
                             A comprehensive analysis of Reese's Book Club's impact on contemporary literary culture and the middlebrow reading market. This thesis examines how celebrity book clubs shape reading practices, publishing decisions, and cultural perceptions of literature through computational analysis and literary theory.
                         </p>
-                        <div class="research-highlights">
-                            <h4>Key Findings:</h4>
-                            <ul>
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-forest-800 mb-3">Key Findings:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-forest-700">
                                 <li>Analyzed patterns in Reese's Book Club selections using digital humanities methods</li>
                                 <li>Explored the intersection of celebrity culture and literary taste-making</li>
                                 <li>Examined the role of social media in contemporary book marketing and reader engagement</li>
                                 <li>Investigated how book clubs influence publishing industry trends and author visibility</li>
                             </ul>
                         </div>
-                        <p class="research-link">
-                            <a href="heidi-smith-senior-thesis.pdf" target="_blank" class="pdf-link">View Full Thesis (PDF)</a>
-                        </p>
+                        <a href="heidi-smith-senior-thesis.pdf" target="_blank" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">View Full Thesis (PDF)</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="blog" class="blog">
-            <div class="container">
-                <h2>Blog</h2>
-                <div class="blog-content">
-                    <p>Thoughts on technology, writing, and the intersection of both.</p>
-                    <div class="coming-soon">
-                        <p>Content coming soon...</p>
+        <section id="blog" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-forest-800 mb-16">Blog</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg text-center text-forest-600 mb-12">Thoughts on technology, writing, and the intersection of both.</p>
+                    <div class="bg-gradient-to-r from-pink-50 to-forest-50 rounded-lg p-8 text-center border border-pink-200">
+                        <p class="text-forest-600 font-medium italic">Blog posts coming soon...</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="dev" class="dev">
-            <div class="container">
-                <h2>Dev</h2>
-                <div class="dev-content">
-                    <p>Personal projects, code samples, and development work.</p>
-                    <div class="coming-soon">
-                        <p>Content coming soon...</p>
+        <section id="dev" class="py-20 bg-forest-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-forest-800 mb-16">Dev</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg text-center text-forest-600 mb-12">Personal projects, code samples, and development work.</p>
+                    <div class="bg-gradient-to-r from-forest-50 to-pink-50 rounded-lg p-8 text-center border border-forest-200">
+                        <p class="text-forest-600 font-medium italic">Development projects coming soon...</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>You can find me on LinkedIn.</p>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/heidiasmith/" target="_blank" class="contact-link">
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-forest-800 mb-16">Get In Touch</h2>
+                <div class="max-w-2xl mx-auto text-center">
+                    <p class="text-lg text-forest-600 mb-8">You can find me on LinkedIn.</p>
+                    <a href="https://www.linkedin.com/in/heidiasmith/" target="_blank" class="inline-block bg-forest-700 hover:bg-forest-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         LinkedIn
                     </a>
                 </div>
@@ -121,8 +155,10 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Heidi Ann Smith. All rights reserved.</p>
+    <footer class="bg-forest-800 text-forest-100 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Heidi Ann Smith. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
